@@ -1,0 +1,16 @@
+@import './variables.scss';
+
+
+html, body {
+font-family: $spartan;
+font-size: 15px;
+margin: 0;
+}
+
+
+
+
+.container{
+    background: $ligthGrayishCyanBG;
+    padding:0px 50px;
+}

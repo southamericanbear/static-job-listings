@@ -1,0 +1,67 @@
+@import './variables.scss';
+
+
+
+.job-card{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+}
+
+.left-container{
+    display: flex;
+    align-items: center;
+}
+
+
+.job-info{
+    margin-left: 20px;
+       h1{
+        color:$desaturatedDarkCyan;
+        font-size: 1.3rem;
+      }
+}
+
+.title{
+    display: flex;
+    align-items: center;
+        span{
+            color:$desaturatedDarkCyan;
+            font-weight: 700;
+        }
+        span, h2{
+            font-size: 1rem;
+            margin-right: 25px;
+        
+        }
+        h2{
+            background: $desaturatedDarkCyan;
+            border-radius: 30px;
+            color: white;
+            padding: 5px 10px;
+            margin-top: 0px;            
+            margin-bottom: 0px;
+        }
+        h2:last-child{
+            background: black;
+        }
+}
+
+
+.details{
+    color:$darkGrayishCyan;
+    font-size: .8rem;
+        .dot{
+            margin: auto 5px;
+        }
+}
+
+
+
+
+
+
+.right-container{
+     display: flex;
+     align-items: center;
+}
