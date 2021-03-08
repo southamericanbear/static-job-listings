@@ -9,8 +9,19 @@ margin: 0;
 
 
 
-
-.container{
+body{
     background: $ligthGrayishCyanBG;
-    padding:0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+
+#root {
+    display: flex;      
+    padding: 50px;
+    justify-content: center;
 }

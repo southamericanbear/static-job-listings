@@ -12,9 +12,15 @@ export const JobsCard = ({
   isFeatured,
   isNew,
   jobTags,
+  handleFilter,
 }) => {
+  let border =
+    isFeatured === true
+      ? { borderLeft: "5px solid hsl(180, 29%, 50%)" }
+      : { borderLeft: "0px solid transparent" };
+
   return (
-    <div className="job-card" style={{ border: "solid 2px purple" }}>
+    <div className="job-card" style={border}>
       <div className="left-container flex flex-row sm:flex-row  md:flex-row lg:flex-col">
         <div className="img">
           <img src={logo} alt={company} />
@@ -22,8 +28,8 @@ export const JobsCard = ({
         <div className="job-info">
           <div className="title">
             <span>{company}</span>
-            {isNew && <h2>New!</h2>}
-            {isFeatured && <h2>Featured</h2>}
+            {isNew && <h2 className="new">New!</h2>}
+            {isFeatured && <h2 className="featured">Featured</h2>}
           </div>
           <h1>{position}</h1>
           <div className="details">
@@ -39,7 +45,11 @@ export const JobsCard = ({
       <div className="right-container">
         {jobTags.map((tag, index) => {
           return (
-            <button className="tag-btn" key={index}>
+            <button
+              className="tag-btn"
+              key={index}
+              onClick={() => handleFilter(tag)}
+            >
               {tag}
             </button>
           );
